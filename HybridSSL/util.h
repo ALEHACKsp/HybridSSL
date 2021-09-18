@@ -7,6 +7,7 @@
 
 #include "Third Party/xorstr.hpp"
 #include "resources/finder.h"
+#include "settings.h"
 
 static bool starts_with(std::string const& str, std::string const& tofind)
 {
@@ -23,8 +24,6 @@ static bool ends_with(std::string const& fullString, std::string const& ending) 
 }
 
 #include "hooks.h"
-
-bool WriteLogsToFile = false;
 
 UEngine* GEngine;
 GObjects* GObjs = nullptr;

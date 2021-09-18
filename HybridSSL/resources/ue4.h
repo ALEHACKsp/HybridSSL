@@ -749,7 +749,12 @@ struct UKismetRenderingLibrary_ImportFileAsTexture2D_Params
 	UObject* ReturnValue;
 };
 
-/*struct UKismetStringLibrary_Conv_StringToName_Params
+struct FName
+{
+
+};
+
+struct UKismetStringLibrary_Conv_StringToName_Params
 {
 	FString inString;
 	FName ReturnValue;
@@ -759,4 +764,4 @@ struct UMaterialInstanceDynamic_SetTextureParameterValue_Params
 {
 	FName ParameterName;
 	UObject* Value;
-}; */
+};

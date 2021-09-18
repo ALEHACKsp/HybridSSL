@@ -4,8 +4,11 @@
 #include "Third Party/MinHook/MinHook.h"
 #include "resources/console.h"
 #include "resources/skins.h"
+#include "settings.h"
+#ifdef EXPERIMENTAL
 #include "Third Party/Kiero/kiero.h"
 #include "resources/imgui.h"
+#endif
 
 void Main()
 {
@@ -19,6 +22,7 @@ void Main()
     MH_CreateHook((void*)ProcessEventP, PEHook, (void**)&ProcessEvent);
     MH_EnableHook((void*)ProcessEventP);
     MH_EnableHook((void*)CurlEasyOptP);
+#ifdef EXPERIMENTAL
     bool init_hook = false; // imgui
     do
     {
@@ -28,6 +32,7 @@ void Main()
             init_hook = true;
         }
     } while (!init_hook);
+#endif
     //SpawnConsole();
     //SpawnObject((long long)GEngine->ConsoleClass, nullptr, (long long*)GEngine->GameViewport);
     //WriteMemory(0x6FB2098, (int)"Mogging in...");

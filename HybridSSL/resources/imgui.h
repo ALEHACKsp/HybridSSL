@@ -7,7 +7,10 @@
 #include "../Third Party/ImGui/imgui.h"
 #include "../Third Party/ImGui/imgui_impl_win32.h"
 #include "../Third Party/ImGui/imgui_impl_dx11.h"
+#include "../settings.h"
+#ifdef EXPERIMENTAL
 #include "skins.h"
+#endif
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -70,10 +73,12 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 	ImGui::NewFrame();
 
 	ImGui::Begin("ImGui Window");
+#ifdef EXPERIMENTAL
 	if (Button("Switch Textures"))
 	{
 		SetBodyCustomTextureFromPng(L"C:\\Users\\Stowe\\Downloads\\dcrsc6n-8c04dfcf-7728-462f-a65b-76ed6c8816ab.png");
 	}
+#endif
 	ImGui::End();
 
 	ImGui::Render();

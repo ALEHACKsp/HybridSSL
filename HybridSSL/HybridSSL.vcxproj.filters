@@ -56,6 +56,9 @@
     <ClInclude Include="resources\imgui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Third Party\MinHook\minhook.x64.lib" />

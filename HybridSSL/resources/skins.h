@@ -5,7 +5,7 @@
 
 inline auto GetFName(const wchar_t* String)
 {
-	/*
+	
 	UObject* KismetStringLibrary = FindObject<UObject*>(xor("KismetStringLibrary /Script/Engine.Default__KismetStringLibrary"));
 
 	static auto fn = FindObject<UFunction*>(xor("Function /Script/Engine.KismetStringLibrary.Conv_StringToName"));
@@ -15,12 +15,13 @@ inline auto GetFName(const wchar_t* String)
 
 	ProcessEventf(KismetStringLibrary, fn, &params);
 
-	return params.ReturnValue; */
+	return params.ReturnValue; 
+
 }
 
 auto ImportPngAsTexture2D(const wchar_t* FileFullPath)
 {
-	/* // struct UTexture2D* ImportFileAsTexture2D(struct UObject* WorldContextObject, struct FString Filename); // Function Engine.KismetRenderingLibrary.ImportFileAsTexture2D // (Final|RequiredAPI|Native|Static|Public|BlueprintCallable)
+	// struct UTexture2D* ImportFileAsTexture2D(struct UObject* WorldContextObject, struct FString Filename); // Function Engine.KismetRenderingLibrary.ImportFileAsTexture2D // (Final|RequiredAPI|Native|Static|Public|BlueprintCallable)
 
 	UObject* KismetRenderingLibrary = FindObject<UObject*>(xor("KismetRenderingLibrary /Script/Engine.Default__KismetRenderingLibrary"));
 
@@ -32,7 +33,7 @@ auto ImportPngAsTexture2D(const wchar_t* FileFullPath)
 
 	ProcessEventf(KismetRenderingLibrary, fn, &params);
 
-	return params.ReturnValue; */
+	return params.ReturnValue; 
 }
 
 static void SetBodyCustomTextureFromPng(const wchar_t* PngFileFullPath, bool bIsHead = false)
