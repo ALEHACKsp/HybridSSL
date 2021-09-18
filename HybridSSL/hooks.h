@@ -10,8 +10,7 @@
 #include "resources/curldefs.h"
 #include "resources/cheatscript.h"
 #include "util.h"
-
-const char* FNhost = "localhost:9352"; // Note if it only redirects version check and you get login page that means its a invalid url or you need to remove https:// www. or the / at the end.
+#include "settings.h"
 
 typedef void CURL;
 

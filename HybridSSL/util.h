@@ -25,8 +25,8 @@ static bool ends_with(std::string const& fullString, std::string const& ending) 
 
 #include "hooks.h"
 
-UEngine* GEngine;
 GObjects* GObjs = nullptr;
+UEngine* GEngine;
 UObject* GWorld;
 
 static std::string tolower_s(std::string str)
