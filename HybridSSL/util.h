@@ -41,7 +41,7 @@ static void CreateConsole()
 {
     AllocConsole();
 
-    SetConsoleTitleA(xor("PE Hook SSL Bypass by Milxnor | discord.gg/2bkwzGM8zg"));
+    SetConsoleTitleA(xor("PE Hook SSL Bypass by Milxnor | discord.gg/JqJDDBFUWn"));
 
     FILE* file;
 
