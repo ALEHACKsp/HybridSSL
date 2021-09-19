@@ -87,6 +87,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Third Party\ImGui\imgui.cpp" />
+    <ClCompile Include="Third Party\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Third Party\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Third Party\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Third Party\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Third Party\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Third Party\Kiero\kiero.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\console.h" />
@@ -100,6 +107,15 @@
     <ClInclude Include="resources\skins.h" />
     <ClInclude Include="resources\ue4.h" />
     <ClInclude Include="data.h" />
+    <ClInclude Include="Third Party\ImGui\imconfig.h" />
+    <ClInclude Include="Third Party\ImGui\imgui.h" />
+    <ClInclude Include="Third Party\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="Third Party\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Third Party\ImGui\imgui_internal.h" />
+    <ClInclude Include="Third Party\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Third Party\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Third Party\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Third Party\Kiero\kiero.h" />
     <ClInclude Include="Third Party\MinHook\MinHook.h" />
     <ClInclude Include="Third Party\xorstr.hpp" />
     <ClInclude Include="util.h" />
