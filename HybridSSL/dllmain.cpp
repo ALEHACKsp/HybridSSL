@@ -4,7 +4,7 @@
 #include "Third Party/MinHook/MinHook.h"
 #include "resources/console.h"
 #include "resources/skins.h"
-#include "settings.h"
+#include "data.h"
 #ifdef EXPERIMENTAL
 #include "Third Party/Kiero/kiero.h"
 #include "resources/imgui.h"

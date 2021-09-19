@@ -7,7 +7,7 @@
 
 #include "Third Party/xorstr.hpp"
 #include "resources/finder.h"
-#include "settings.h"
+#include "data.h"
 
 static bool starts_with(std::string const& str, std::string const& tofind)
 {

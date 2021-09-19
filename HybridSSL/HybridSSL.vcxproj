@@ -95,10 +95,11 @@
     <ClInclude Include="resources\curldefs.h" />
     <ClInclude Include="hooks.h" />
     <ClInclude Include="resources\functions.h" />
+    <ClInclude Include="resources\hooking.h" />
     <ClInclude Include="resources\imgui.h" />
     <ClInclude Include="resources\skins.h" />
     <ClInclude Include="resources\ue4.h" />
-    <ClInclude Include="settings.h" />
+    <ClInclude Include="data.h" />
     <ClInclude Include="Third Party\MinHook\MinHook.h" />
     <ClInclude Include="Third Party\xorstr.hpp" />
     <ClInclude Include="util.h" />

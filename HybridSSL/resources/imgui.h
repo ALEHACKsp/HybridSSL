@@ -7,7 +7,7 @@
 #include "../Third Party/ImGui/imgui.h"
 #include "../Third Party/ImGui/imgui_impl_win32.h"
 #include "../Third Party/ImGui/imgui_impl_dx11.h"
-#include "../settings.h"
+#include "../data.h"
 #ifdef EXPERIMENTAL
 #include "skins.h"
 #endif

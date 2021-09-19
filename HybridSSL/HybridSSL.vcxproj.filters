@@ -56,7 +56,10 @@
     <ClInclude Include="resources\imgui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="settings.h">
+    <ClInclude Include="data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resources\hooking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

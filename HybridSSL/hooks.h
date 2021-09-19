@@ -10,7 +10,7 @@
 #include "resources/curldefs.h"
 #include "resources/cheatscript.h"
 #include "util.h"
-#include "settings.h"
+#include "data.h"
 
 typedef void CURL;
 
