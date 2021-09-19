@@ -18,21 +18,21 @@ void Main()
     std::cout << "afceafe";
     //UnlockConsole();
     //ExecuteConsoleCommand(L"testaaaaaaaaaa");
+#ifdef EXPERIMENTAL
+    bool imgui_hook = false;
+    do
+    {
+        if (kiero::init(kiero::RenderType::D3D11 /* Auto */) == kiero::Status::Success)
+        {
+            kiero::bind(8, (void**)&oPresent, hkPresent);
+            imgui_hook = true;
+        }
+    } while (!imgui_hook);
+#endif
     MH_CreateHook((void*)CurlEasyOptP, changeeasyopt, (void**)&curl_easy_setopt_original);
     MH_CreateHook((void*)ProcessEventP, PEHook, (void**)&ProcessEvent);
     MH_EnableHook((void*)ProcessEventP);
     MH_EnableHook((void*)CurlEasyOptP);
-#ifdef EXPERIMENTAL
-    bool init_hook = false; // imgui
-    do
-    {
-        if (kiero::init(kiero::RenderType::D3D11) == kiero::Status::Success)
-        {
-            kiero::bind(8, (void**)&oPresent, hkPresent);
-            init_hook = true;
-        }
-    } while (!init_hook);
-#endif
     //SpawnConsole();
     //SpawnObject((long long)GEngine->ConsoleClass, nullptr, (long long*)GEngine->GameViewport);
     //WriteMemory(0x6FB2098, (int)"Mogging in...");

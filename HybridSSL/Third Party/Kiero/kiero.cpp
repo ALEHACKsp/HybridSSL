@@ -40,6 +40,8 @@
 # define KIERO_TEXT(text) text
 #endif
 
+//#define KIERO_INCLUDE_D3D12
+
 #define KIERO_ARRAY_SIZE(arr) ((size_t)(sizeof(arr)/sizeof(arr[0])))
 
 static kiero::RenderType::Enum g_renderType = kiero::RenderType::None;
@@ -629,30 +631,14 @@ kiero::Status::Enum kiero::init(RenderType::Enum _renderType)
 		{
 			RenderType::Enum type = RenderType::None;
 
-			if (::GetModuleHandle(KIERO_TEXT("d3d9.dll")) != NULL)
-			{
-				type = RenderType::D3D9;
-			}
-			else if (::GetModuleHandle(KIERO_TEXT("d3d10.dll")) != NULL)
-			{
-				type = RenderType::D3D10;
-			}
-			else if (::GetModuleHandle(KIERO_TEXT("d3d11.dll")) != NULL)
-			{
-				type = RenderType::D3D11;
-			}
-			else if (::GetModuleHandle(KIERO_TEXT("d3d12.dll")) != NULL)
-			{
-				type = RenderType::D3D12;
-			}
-			else if (::GetModuleHandle(KIERO_TEXT("opengl32.dll")) != NULL)
-			{
-				type = RenderType::OpenGL;
-			}
-			else if (::GetModuleHandle(KIERO_TEXT("vulcan-1.dll")) != NULL)
-			{
-				type = RenderType::Vulkan;
-			}
+			//if (::GetModuleHandle(KIERO_TEXT("d3d9.dll")) != NULL) { type = RenderType::D3D9; } // Fortnite uses this and your rendering mode??!?!
+			if (::GetModuleHandle(KIERO_TEXT("d3d10.dll")) != NULL) { type = RenderType::D3D10; }
+			else if (::GetModuleHandle(KIERO_TEXT("d3d11.dll")) != NULL) { type = RenderType::D3D11; }
+			else if (::GetModuleHandle(KIERO_TEXT("d3d12.dll")) != NULL) { type = RenderType::D3D12; }
+			else if (::GetModuleHandle(KIERO_TEXT("opengl32.dll")) != NULL) { type = RenderType::OpenGL; }
+			else if (::GetModuleHandle(KIERO_TEXT("vulcan-1.dll")) != NULL) { type = RenderType::Vulkan; }
+			else if (::GetModuleHandle(KIERO_TEXT("D3D12Core.dll")) != NULL) { type = RenderType::D3D12; }
+			else if (::GetModuleHandle(KIERO_TEXT("shimd3d12_64.dll")) != NULL) { type = RenderType::D3D12; }
 
 			return init(type);
 		}
